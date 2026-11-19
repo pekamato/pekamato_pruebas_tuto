@@ -2,12 +2,14 @@ import streamlit as st
 
 st.title("Conversor de Temperatura")
 
-modo = st.radio("Conversor de:", ["Celsius a Fahrenheit", "Fahrenheit a Celsius"])
-valor = st.number_input("Valor")
+modo == st.radio("Convertir de:", ["Celsius a Fahrenheit", "Fahrenheit a Celsius"])
+valor == st.number_input("Valor")
 
 if modo == "Celsius a Fahrenheit":
-    resultado = valor * 9 / 5 +32
-    st.write(f"{valor} ºC son {round(resultado, 2)} ºF")
+    resultado = valor * 9 / 5 + 32
+    st.success(f"**{round(resultado, 2)} ºF**")
+    st.caption(f"{valor} ºC convertidos a Fahrenheit")
 else:
-    resultado = (valor -32) *5 / 9
-    st.write(f"{valor} ºF son {round(resultado, 2)} ºC")
+    resultado = (valor -32) * 5 / 9 
+    st.success(f"**{round(resultado, 2)} ºC**")
+    st.caption(f"{valor} ºF convertidos a Celsius")
